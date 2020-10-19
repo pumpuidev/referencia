@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+fajl=$1
+if [ ! -f $fajl ]
+then
+	echo "A megadott fajl nem letezik!"
+	exit
+fi
+max=0
+mnev=""
+mkor=0
+while read sor
+do
+	nev=`echo $sor | cut -d":" -f1`
+	kor=`echo $sor | cut -d":" -f2`
+	dobas=`echo $sor | cut -d":" -f3`
+	if [ $dobas -gt $max ]
+	then
+		max=$dobas
+		mnev=$nev
+		mkor=$kor
+	fi
+done < $fajl
+echo "A nyertes: $mnev, szuletesi ev: $mkor, dobas eredmenye: $max"

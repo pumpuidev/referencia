@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+fajl=$1
+while read bin
+do
+	dec=0
+	szorzo=128
+	for i in `seq 8`
+	do
+		ertek=`echo $bin | cut -c$i`
+		hi=$((ertek*szorzo))
+		dec=$((dec+hi))
+		szorzo=$((szorzo/2))
+	done
+	echo $dec
+done < $fajl

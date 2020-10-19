@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+fajl=$1
+cat $fajl |awk \
+'BEGIN{
+	FS=":"
+	nev=""
+	kor=0
+	max=0
+}
+{
+	if ($3 > max)
+	{
+		max=$3
+		kor=$2
+		nev=$1
+	}
+}
+END{
+	print "A nyertes: "nev", szuletesi ev: "kor", dobas eredmenye: "max
+}'

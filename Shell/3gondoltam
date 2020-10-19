@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+	echo -n "Nincs parameter megadva. Adj meg egy szamot: "
+	read m
+else
+	m=$1
+fi
+
+gondolt=`expr $RANDOM % $m + 1`
+echo -n "Melyik szamra gondoltam? Tippelj: "
+read tipp
+
+while [ $tipp -ne $gondolt  ]
+do
+	if [ $tipp -lt $gondolt ]
+	then
+		echo "Tipp kisebb"
+		echo -n "Kovetkezo tipp: "
+		read tipp
+	elif [ $tipp -gt $gondolt ]
+	then
+		echo "Tipp nagyobb"
+		echo -n "Kovetkezo tipp: "
+		read tipp	
+	fi
+done
+echo "Talalt!"
+
+exit

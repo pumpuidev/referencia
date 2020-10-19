@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]
+then
+	echo "A szkriptet 3 parameterrel kell meghivni."
+	exit
+else
+	elso=$1
+	masodik=$2
+	oszto=$3
+fi
+
+for i in `seq $elso $masodik`
+do
+	m=$(($i%$oszto))
+	if [ $m -eq 0 ]
+	then echo $i
+	fi
+done
+
+exit
