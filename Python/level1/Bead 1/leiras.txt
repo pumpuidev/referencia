@@ -1,0 +1,26 @@
+Adott egy fájl (a neve legyen a program parancssori paramétere), ami egy aukciós weboldal adatait tartalmazza. A fájl elején sorrendben meg vannak adva az aktuális árucikkek, amikre licitálni lehet. Egy sor egy árucikk sorszámát, nevét, tulajdonságait és a minimális árát tartalmazza. (Az egyes elemek pontosvesszővel vannak elválasztva.) Ezután következnek a licitek adatai (a két rész üres sorokkal van elválasztva, több üres sor is lehet közöttük). Itt minden licithez egy sor tartozik, amely tartalmazza a licitáló nevét, az árucikk sorszámát, amire a licit történik, illetve az ajánlott árat. Feltehető, hogy a licitek sorrendben követik egymást, azaz ugyanarra az árura, a későbbi sorokban már csak nagyobb értékű licit érkezhet.
+
+Minta bemeneti fájl:
+
+1. grillsütő; jó állapotú; 5000
+2. gyerek bicikli; 14"-os; 10000
+3. roller; piros; 2000
+4. kenyérpirító; fekete; 2000
+
+Kis Péter: 1. 4000
+Szabó Árpád: 1. 5000
+Jó Péter: 2. 6000
+Szabó Péter: 1. 5500
+Kovács Antal: 3. 1000
+Nagy Árpád: 2. 10000 
+
+A feladat egy olyan fájl (a neve mindig legyen eredmeny.txt) elkészítése, ami tartalmazza a sikeresen eladott áruk adatait. Azaz a fájlban legyen egy sor minden olyan árucikk esetén, melyre érkezett a megadott minimálárnál nagyobb értékű licit. A sor tartalmaza az árucikk sorszámát, nevét és a maximális licitet megadó licitáló nevét, illetve az ajánlott árat.
+
+Minta eredmény fájl:
+
+1. grillsütő, Szabó Péter 5500
+2. gyerek bicikli, Nagy Árpád 10000
+
+További követelmények. A bemeneti fájl a program parancssori paramétere legyen. A kimeneti fájl neve mindig legyen "eredmeny.txt". Hiányzó argumentum esetén a program "Adj meg egy file-t!", míg nem létező fájl esetén "Nincs ilyen file!" hibaüzenetet adjon (de mást ne csináljon).
+
+A megoldást tartalmazó python fájl forráskódját kell feltölteni (UTF-8 kódolásnak megfelelően).

@@ -1,0 +1,53 @@
+Adott egy "data.txt" nevű fájl, ami egyszerű számla adatokat tartalmaz. Egy sor a számlatulajdonos nevét, számlaszámát az utolsó módosítás idejét és az aktuális egyenleget tartalmazza. (Az egyes elemek szóközzel vannak elválasztva.) A sorok a tulajdonos nevek, illetve azon belül (ha vannak egyező nevek) a számlaszámok alapján rendezettek.
+
+Minta data.txt fájl:
+
+Acél Tibor 10012-34321 2016.02.20. 231231
+Lakatos Pál 10201-11021 2016.01.10. 2310456
+Nagy Árpád 10001-31021 2015.12.30. 524432
+Nagy Árpád 10210-41011 2016.02.03. 323532
+Zagyva László 10001-31121 2016.03.21. 765432
+
+Ezen felül adva van egy "update" nevű fájl, ami a számlák adott napi változásait tartalmazza. A fájl első sora a változás dátumát adja meg, míg a többi sor a módosított számla tulajdonosát, a számlaszámot, illetve a módosítás mértékét. Egy számla egy napon többször is módosulhat és a fájl az adott napon létrejövő számlára vonatkozó adatot (a létrehozáskor befizetett összeget) is tartalmazhat (olyan számlatulajdonos, számlaszám párost, ami eddig még nem létezett).
+
+Minta update fájl:
+
+2016.03.22.
+Nagy Árpád 10001-31021 +20000
+Acél Tibor 10012-34321 +35432
+Acél Tibor 10012-34321 -10000
+Kiss Péter 10120-00123 +120334
+Nagy Árpád 10001-31021 +5000
+Nagy Árpád 10210-41011 -6000
+Lakatos Pál 10201-11021 +100210
+Kovács Tamás Géza 12345-32100 +123456
+
+A feladat két fájl elkészítése. Az egyik (a neve mindig legyen "newdata") adja meg a módosítás utáni aktuális számlaadatokat, az eredeti leírással megegyező formában.
+
+Minta newdata fájl a fenti adatok esetén:
+
+Acél Tibor 10012-34321 2016.03.22. 256663
+Kiss Péter 10120-00123 2016.03.22. 120334
+Kovács Tamás Géza 12345-32100 2016.03.22. 123456
+Lakatos Pál 10201-11021 2016.03.22. 2410666
+Nagy Árpád 10001-31021 2016.03.22. 549432
+Nagy Árpád 10210-41011 2016.03.22. 317532
+Zagyva László 10001-31121 2016.03.21. 765432
+
+A másik (a neve mindig legyen "log") adjon meg egy összesítést az adott napi módosításokról. Az első sora legyen a módosítás dátuma, utána egy üres sor, illetve a "new accounts:" szöveget követően sorba rendezve adja meg az újonnan létrejövő számlákat (számlatulajdonos számlaszám), majd üres sort és "other updates:" szöveget követően sorba rendezve a módosított számlákat (számlatulajdonos számlaszám).
+
+Minta log fájl a fenti adatok esetén:
+
+2016.03.22.
+
+new accounts:
+Kiss Péter 10120-00123
+Kovács Tamás Géza 12345-32100
+
+other updates:
+Acél Tibor 10012-34321
+Lakatos Pál 10201-11021
+Nagy Árpád 10001-31021
+Nagy Árpád 10210-41011
+
+A megoldást tartalmazó python fájl forráskódját kell feltölteni (UTF-8 kódolásnak megfelelően).
