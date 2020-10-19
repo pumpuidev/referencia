@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OWM city filter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- input text + filter -->
+    <div class="input">
+      <input type="text" placeholder="Enter the city" class="input_text">
+      <input type="submit" value="Filter" class="submit">
+    </div>
+  </div>
+  <!-- filtered city detail -->
+  <div class="container">
+    <div class="card">
+      <h1 class="name" id="name"></h1>
+      <p class="temp"></p>
+    </div>
+  </div>
+  <!-- cities table -->
+  <table>
+    <tr>
+      <td>
+        <div class="London"></div>
+        <div>
+          <h1 id="temp"></h1>
+          <a href="https://openweathermap.org/city/2643743">
+            <div id="location" ></div>
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="NewYork"></div>
+        <div>
+          <h1 id="tempNY"></h1><a href="https://openweathermap.org/city/5128581">
+          <div id="locationNY"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Beijing"></div>
+        <div>
+          <h1 id="tempBeijing"></h1><a href="https://openweathermap.org/city/1816670">
+          <div id="locationBeijing"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Los Angeles"></div>
+        <div>
+            <h1 id="tempLA2"></h1><a href="https://openweathermap.org/city/5368361">
+            <div id="locationLA2"></div></a>
+        </div>
+        </td>
+      <td>
+        <div class="Budapest"></div>
+        <div>
+            <h1 id="tempBUDA"></h1><a href="https://openweathermap.org/city/3054643">
+            <div id="locationBUDA"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Vienna"></div>
+        <div>
+            <h1 id="tempVienna"></h1><a href="https://openweathermap.org/city/2761369">
+            <div id="locationVienna"></div></a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="Prague"></div>
+        <div>
+            <h1 id="tempPrague"></h1><a href="https://openweathermap.org/city/3067696">
+            <div id="locationPrague"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Berlin"></div>
+        <div>
+            <h1 id="tempBerlin"></h1><a href="https://openweathermap.org/city/2950159">
+            <div id="locationBerlin"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Paris"></div>
+        <div>
+            <h1 id="tempParis"></h1><a href="https://openweathermap.org/city/2988507">
+            <div id="locationParis"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Madrid"></div>
+        <div>
+            <h1 id="tempMadrid"></h1><a href="https://openweathermap.org/city/3117735">
+            <div id="locationMadrid"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Barcelona"></div>
+        <div>
+            <h1 id="tempBarcelona"></h1><a href="https://openweathermap.org/city/3128760">
+            <div id="locationBarcelona"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Lisbon"></div>
+        <div>
+            <h1 id="tempLisbon"></h1><a href="https://openweathermap.org/city/2267057">
+            <div id="locationLisbon"></div></a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="Moscow"></div>
+        <div>
+            <h1 id="tempMoscow"></h1><a href="https://openweathermap.org/city/524901">
+            <div id="locationMoscow"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Istanbul"></div>
+        <div>
+            <h1 id="tempIstanbul"></h1><a href="https://openweathermap.org/city/745042">
+            <div id="locationIstanbul"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="lCairol"></div>
+        <div>
+            <h1 id="templCairol"></h1><a href="https://openweathermap.org/city/360630">
+            <div id="locationlCairol"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Dubai"></div>
+        <div>
+            <h1 id="tempDubai"></h1><a href="https://openweathermap.org/city/292223">
+            <div id="locationDubai"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Tehran"></div>
+        <div>
+            <h1 id="tempTehran"></h1><a href="https://openweathermap.org/city/112931">
+            <div id="locationTehran"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Jerusalem"></div>
+        <div>
+            <h1 id="tempJerusalem"></h1><a href="https://openweathermap.org/city/281184">
+            <div id="locationJerusalem"></div></a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="Delhi"></div>
+        <div>
+            <h1 id="tempDelhi"></h1><a href="https://openweathermap.org/city/1273294">
+            <div id="locationDelhi"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Bangkok"></div>
+        <div>
+            <h1 id="tempBangkok"></h1><a href="https://openweathermap.org/city/1609350">
+            <div id="locationBangkok"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Shanghai"></div>
+        <div>
+            <h1 id="tempShanghai"></h1><a href="https://openweathermap.org/city/1796236">
+            <div id="locationShanghai"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Tokyo"></div>
+        <div>
+            <h1 id="tempTokyo"></h1><a href="https://openweathermap.org/city/1850144">
+            <div id="locationTokyo"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Sydney"></div>
+        <div>
+            <h1 id="tempSydney"></h1><a href="https://openweathermap.org/city/2147714">
+            <div id="locationSydney"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="CapeTown"></div>
+        <div>
+            <h1 id="tempCapeTown"></h1><a href="https://openweathermap.org/city/3369157">
+            <div id="locationCapeTown"></div></a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="Lagos"></div>
+        <div>
+            <h1 id="tempLagos"></h1><a href="https://openweathermap.org/city/2332459">
+            <div id="locationLagos"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Casablanca"></div>
+        <div>
+            <h1 id="tempCasablanca"></h1><a href="https://openweathermap.org/city/2553604">
+            <div id="locationCasablanca"></div></a>
+        </div>
+       </td>
+      <td>
+        <div class="RiodeJaneiro"></div>
+        <div>
+            <h1 id="tempRiodeJaneiro"></h1><a href="https://openweathermap.org/city/3451190">
+            <div id="locationRiodeJaneiro"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="BuenosAires"></div>
+        <div>
+            <h1 id="tempBuenosAires"></h1><a href="https://openweathermap.org/city/3435910">
+            <div id="locationBuenosAires"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Mexico"></div>
+        <div>
+            <h1 id="tempMexico"></h1><a href="https://openweathermap.org/city/3530597">
+            <div id="locationMexico"></div></a>
+        </div>
+      </td>
+      <td>
+        <div class="Dallas"></div>
+        <div>
+            <h1 id="tempDallas"></h1><a href="https://openweathermap.org/city/4684888">
+            <div id="locationDallas"></div></a>
+        </div>
+      </td>
+    </tr>
+  </table>
+<!-- import js -->
+<script  src="script.js"></script>
+</body>
+</html>
