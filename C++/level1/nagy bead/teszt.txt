@@ -1,0 +1,7 @@
+6
+Budapest 15 0
+Erd 30 10
+Tarnok 32 0
+Martonvasar 0 48
+Velence 27 20
+Szekesfehervar 0 26
