@@ -1,0 +1,131 @@
+
+game.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+gameBG
+  rotate: false
+  xy: 1, 31
+  size: 640, 480
+  orig: 640, 480
+  offset: 0, 0
+  index: -1
+settingsBG
+  rotate: false
+  xy: 643, 311
+  size: 320, 200
+  orig: 320, 200
+  offset: 0, 0
+  index: -1
+playerRun
+  rotate: false
+  xy: 643, 189
+  size: 92, 120
+  orig: 92, 120
+  offset: 0, 0
+  index: -1
+playerJump
+  rotate: false
+  xy: 737, 216
+  size: 104, 93
+  orig: 104, 93
+  offset: 0, 0
+  index: -1
+desk
+  rotate: false
+  xy: 1, 5
+  size: 56, 24
+  orig: 56, 24
+  offset: 0, 0
+  index: -1
+robotMoving
+  rotate: false
+  xy: 965, 489
+  size: 48, 22
+  orig: 48, 22
+  offset: 0, 0
+  index: -1
+vending
+  rotate: false
+  xy: 59, 1
+  size: 22, 28
+  orig: 22, 28
+  offset: 0, 0
+  index: -1
+playerStillLeft
+  rotate: false
+  xy: 83, 1
+  size: 11, 28
+  orig: 11, 28
+  offset: 0, 0
+  index: -1
+playerStillRight
+  rotate: false
+  xy: 96, 1
+  size: 11, 28
+  orig: 11, 28
+  offset: 0, 0
+  index: -1
+computer
+  rotate: false
+  xy: 643, 165
+  size: 24, 22
+  orig: 24, 22
+  offset: 0, 0
+  index: -1
+typewriter
+  rotate: false
+  xy: 737, 194
+  size: 24, 20
+  orig: 24, 20
+  offset: 0, 0
+  index: -1
+cabinet
+  rotate: false
+  xy: 843, 288
+  size: 20, 21
+  orig: 20, 21
+  offset: 0, 0
+  index: -1
+robotStillLeft
+  rotate: false
+  xy: 965, 465
+  size: 16, 22
+  orig: 16, 22
+  offset: 0, 0
+  index: -1
+robotStillRight
+  rotate: false
+  xy: 109, 7
+  size: 16, 22
+  orig: 16, 22
+  offset: 0, 0
+  index: -1
+teleporter
+  rotate: false
+  xy: 643, 142
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+bouncyPlatform
+  rotate: false
+  xy: 1015, 503
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+platformHalf
+  rotate: false
+  xy: 1015, 493
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+platformFull
+  rotate: false
+  xy: 669, 179
+  size: 16, 8
+  orig: 16, 8
+  offset: 0, 0
+  index: -1

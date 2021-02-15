@@ -1,0 +1,9 @@
+A=rand(4)
+[om omi]=min(A);
+[ertekmin,oszlopmin]=min(om);
+sormin=omi(oszlopmin);
+[om oma]=max(A);
+[ertekmax,oszlopmax]=max(om);
+sormax=oma(oszlopmax);
+A(sormax,oszlopmax)=ertekmin;
+A(sormin,oszlopmin)=ertekmax

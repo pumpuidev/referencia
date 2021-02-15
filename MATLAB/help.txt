@@ -1,0 +1,100 @@
+eye(x)
+zeros(a,b)	
+ones(a,b)
+A(2,:)
+A(:,1)
+A*b' 
+det, inv, eig, svd 
+length(b') 
+size(A) 
+
+function y = f(x)
+y = x^3+x^2-2;
+
+for i=n:-1, x(i)=i^2; end
+
+n=0; while 2^n<a, n=n+1; end
+
+==   (egyenlõ)
+~=   (nem egyenlõ)
+& (= AND = ÉS)
+| (= OR = VAGY)
+~ (= NOT = NEM)
+
+>>kor=input('Hany eves vagy?'); 
+
+x=-4:0.1:4; 
+y=sin(x); 
+plot(x,y)
+
+x=-4:0.1:4; 
+y=sin(x); 
+z=cos(x)
+plot(x,y,’r’,x,z,’g’)
+
+axis([xmin xmax ymin ymax]) 
+
+ Az y definiálásánál ügyeljünk arra, hogy az  x=-2:0.1:2; 
+ utasítás az x-et vektorként definiálja. Ha tehát azt írjuk, 
+ hogy y = x^2+1, akkor ezt a vektort próbálja négyzetre emelni, 
+ ami nem értelmezhetõ. Ennek elkerülésére a kalapjel elé tegyünk pontot: y=x.^2+1. 
+ Ekkor már x minden egyes elemét emeli négyzetre a Matlab, 
+ és nekünk pontosan erre van szükségünk.
+
+ A=zeros(a,b);
+ A=[1 2 3 ; 4 5 6];
+ x(1) %vektor elsõ eleme
+ x([1 3]) %vektor elsõ és harmadik eleme
+ A=[1 2 3 4; 5 6 7 8];
+A(1,1) %mátrix 1,1-es eleme
+A(2,:) %mátrix második sora, itt a : operátor <minden> értelmû
+A(:,3) %mátrix harmadik oszlopa
+
+>> inv(D)
+>> D*inv(D) %egységmártix
+>> abs(z)
+>> angle(z) z fázisszögének meghatározása
+
+y=1:3:(N-1) %a számok hármasával nõnek, y=[1 4 7].
+z=2:-1:-N) %a számok csökkennek, egyesével, kettõtõl mínusz tízig.
+
+Szorzás, osztás:
+
+
+A=[1 2 3; 4 5 6];
+B=[3 2 1; 6 5 4];
+C=A*B  %hibajelzés: Inner matrix dimensions must agree
+C=A*B' %így helyes
+vektoroknál:
+
+
+a=[1 2 3];
+b=[3 2 1]';
+c=a*b   %az eredmény: egyetlen szám, a skaláris szorzat eredménye.
+Ha elemenként akarunk mûveletet végezni, akkor a ., azaz pont operátort kell használnunk:
+
+
+A=[1 2 3; 4 5 6];
+B=[3 2 1; 6 5 4];
+C=A*B  %hibajelzés: Inner matrix dimensions must agree
+C=A.*B %Helyes: elemenként azonos méretû mátrixokat lehet szorozni.
+vektoroknál:
+
+
+a=[1 2 3];
+b=[3 2 1]';
+c=a.*b   %hiba: nem azonos méretûek.
+c=a.*b'  %helyes.
+Négyzetre emelés mátrixoknál:
+
+
+A=[1 2; 4 5];
+A2=A^2;
+vagy elemenként:
+
+
+a=[1 2 4 5];
+a2=a.^2;
+
+
+

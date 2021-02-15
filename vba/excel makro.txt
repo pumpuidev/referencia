@@ -1,0 +1,74 @@
+Sub teglalap()
+'beolvasás
+a = Val(InputBox("Mennyi az egyik oldal hossza?"))
+b = Val(InputBox("Mennyi a másik oldal hossza?"))
+'számolás
+t = a * b
+k = (a + b) * 2
+d = Sqr(a * a + b * b)
+'kiírás
+MsgBox ("terület: " & t)
+MsgBox ("kerület: " & k)
+MsgBox ("átló: " & Round(d, 4)) 'kerekítés
+End Sub
+Sub ikea()
+    penz = Val(InputBox("Mennyi pénzünk van?"))
+    If penz >= 12990 Then
+        MsgBox ("Meg tudjuk venni a kanapét és marad: " & (penz - 129900))
+    Else
+        MsgBox ("Nem tudjuk megvenni a kanapét, hiányzik:" & (129900 - penz))
+    End If
+End Sub
+Sub víz1()
+    h = Val(InputBox("Mennyi a víz hõmérséklete?"))
+    If h <= 0 Then
+        MsgBox ("Szilárd.")
+    Else
+        If h <= 100 Then
+            MsgBox ("Folyékony.")
+        Else
+            MsgBox ("Gáz")
+        End If
+    End If
+End Sub
+Sub rulettszám()
+    r = Val(InputBox("Melyik számot szeretné megrakni?"))
+    If r >= 0 And r <= 36 Then
+        If r = 0 Then
+            MsgBox ("Rulettszám, 0")
+        ElseIf r Mod 2 = 0 Then
+            MsgBox ("Rulettszám, páros")
+        Else
+            MsgBox ("Rulettszám, páratlan")
+        End If
+    Else
+    MsgBox ("Nem rulettszám, ne legyél kuka.")
+    End If
+End Sub
+
+Sub tételek()
+    összeg = 0
+    dbb = 0
+    dbk = 0
+    összesb = 0
+    összesk = 0
+    n = Val(InputBox("Mennyi tétel lesz?"))
+    For i = 1 To n
+        t = Val(InputBox(i & ".tétel: "))
+        összeg = összeg + t
+            If t > 0 Then
+                dbb = dbb + 1
+                összesb = összesb + 1
+            End If
+            If t < 0 Then
+                dbk = dbk + 1
+                összesk = összesk + 1
+            End If
+        Next i
+    MsgBox ("Összeg: " & összeg)
+    MsgBox ("Bevételek darabszáma: " & dbb)
+    MsgBox ("Kiadások darabszáma: " & dbk)
+    MsgBox ("Összes bevétel: " & összesb)
+    MsgBox ("Összes kiadás: " & összesk)
+    
+End Sub

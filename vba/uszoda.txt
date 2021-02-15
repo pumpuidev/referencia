@@ -1,0 +1,60 @@
+Sub uszoda()
+
+Range("A3:D1000").Clear
+Range("A3").Activate
+osszeg = 0
+sima = 0
+kedv = 0
+elet = 0
+kabin = 0
+kabindb = 0
+
+Do
+    n = Val(InputBox("Hány vendég érkezett (1-50)?"))
+Loop Until n >= 1 And n <= 50
+
+For i = 1 To n
+    Do
+        elet = Val(InputBox("Adja meg a(z)" & i & ". vendég életkorát (5-100)!"))
+    Loop Until elet >= 5 And elet <= 100
+    
+    Do
+        kabin = Val(InputBox("A(z)" & i & ". vendég kér kabint (1/0)?"))
+    Loop Until kabin = "1" Or kabin = "0"
+
+    If elet >= 14 And elet <= 64 Then
+    Range("A3").Activate
+    ActiveCell.Value = elet
+    ActiveCell.Offset(0, 1).Activate
+    ActiveCell.Value = kabin
+    ActiveCell.Offset(1, -1).Activate
+    'ActiveCell.Value = kabin
+    'ActiveCell.Offset(1, 0).Activate
+    Else
+    Range("c3").Activate
+    ActiveCell.Value = elet
+    ActiveCell.Offset(0, 1).Activate
+    ActiveCell.Value = kabin
+    ActiveCell.Offset(1, -1).Activate
+    End If
+    
+    
+    If elet >= 14 And elet <= 64 Then
+        sima = sima + 1
+    Else
+        kedv = kedv + 1
+    End If
+    
+    If kabin = "1" Then
+        kabindb = kabindb + 1
+    End If
+    
+    osszeg = (kedv * 2000) + (sima * 3200) + (kabindb * 500)
+    
+Next i
+
+MsgBox ("osszeg: " & osszeg)
+
+
+
+End Sub

@@ -1,0 +1,27 @@
+Sub idojaras()
+Range("A2:D1000").Clear
+Range("A2").Activate
+
+idokep = 0
+
+Do
+    n = Val(InputBox("Hány mérésbõl áll az idõszak (1-24)?"))
+Loop Until n >= 1 And n <= 24
+
+For i = 1 To n
+    
+    idokep = Val(InputBox("Mi az idõszakra jellemzõ idõkép?"))
+    Do
+        hom = Val(InputBox("Adja meg a hõmérsékletet (-50-50)!"))
+    Loop Until hom >= -50 And hom <= 50
+
+    ActiveCell.Value = i
+    ActiveCell.Offset(0, 1).Activate
+    ActiveCell.Value = idokep
+    ActiveCell.Offset(0, 1).Activate
+    ActiveCell.Value = hom
+    ActiveCell.Offset(1, -2).Activate
+    
+Next i
+
+End Sub

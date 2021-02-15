@@ -1,0 +1,72 @@
+Sub utokeszlet()
+    készlet = 12
+    
+    Sheets(ActiveSheet.Name).UsedRange.ClearContents
+    
+    Range("A1").Activate
+    ActiveCell.Value = "Vevõ"
+    Range("B1").Activate
+    ActiveCell.Value = "Hoz/Visz"
+    Range("C1").Activate
+    ActiveCell.Value = "Készlet"
+    Range("D1").Activate
+    ActiveCell.Value = "Teljesítve?"
+    Range("A2").Activate
+    
+    Do
+        n = Val(InputBox("hany vedeg van (1-20)?"))
+    Loop Until n >= 1 And n <= 20
+    
+    For i = 1 To n
+        Db = Val(InputBox("mennyut hoz vissza? (poziztiv) vagy negativ?"))
+        
+        If Db >= 0 Then
+            teljesítve = ""
+        Else
+            If készlet + Db >= 0 Then
+                készlet = készlet + Db
+                teljesítve = "igen"
+            Else
+                teljesítve = "nem"
+            End If
+        End If
+        
+        ActiveCell.Value = i
+        ActiveCell.Offset(0, 1).Activate    'eltolas egy oszloppal
+        ActiveCell.Value = Db
+        ActiveCell.Offset(0, 1).Activate    'eltolas 1 oszloppal
+        ActiveCell.Value = készlet
+        ActiveCell.Offset(0, 1).Activate    'eltolas 1 oszloppal
+        ActiveCell.Value = teljesítve
+        ActiveCell.Offset(1, -3).Activate
+        ' eltolas 1 sorral -3 oszloppal
+    Next i
+    
+End Sub
+
+Sub szorzatoszlop()
+ActiveCell.Offset(0, -1).Activate
+Do While ActiveCell.Value <> ""
+    ActiveCell.Offset(0, 1).Activate
+    ActiveCell.FormulaR1C1 = "=R[0]C[-2]*R[0]C[-1]"
+    ActiveCell.Offset(1, -1).Activate
+    
+Loop
+End Sub
+
+Sub felnõttek()
+    Range("D2:D100").Clear
+    sor = 2
+    ActiveCell.Offset(1, 1).Activate
+    
+ Do
+    If ActiveCell.Value >= 18 Then
+        ActiveCell.Offset(0, -1).Activate
+        Cells(sor, 4) = ActiveCell.Value
+        ActiveCell.Offset(0, 1).Activate
+        sor = sor + 1
+    End If
+    ActiveCell.Offset(1, 0).Activate
+ Loop While ActiveCell.Value <> ""
+  
+End Sub

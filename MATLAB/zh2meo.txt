@@ -1,0 +1,65 @@
+% zh2a - 1 ---------------------------------------------
+
+function y = fuggv(x)
+% A megadott fv. értékeit számolja vektor bemenõ paraméterrel.
+% Teszt hívás: y = fuggv([-1,0,1])
+if x >= 0, y = x.¡2+1;
+	 else y = -2*x + 1;
+end
+end 
+
+
+% zh2a - 2 ---------------------------------------------
+
+function Sn = sorossz(n)
+% A megadott n-edik részletösszeget számolja.
+% Teszt hívás: S = sorossz(20)
+Sn = 1/2;
+for k = 2:n, 
+	Sn = Sn + 1/(k*(k+1));
+end
+end 
+
+% zh2a - 2 másik meo-------------------------------------------------------
+
+function Sn = sorossz(n)
+% A megadott n-edik részletösszeget számolja.
+% Teszt hívás: S = sorossz(20)
+k = 1:n;
+Sn = sum(1./(k.*(k+1)));
+end 
+
+
+%-------------------------------------------------------
+%-------------------------------------------------------
+
+% zh2b - 1 ---------------------------------------------
+
+function y = fuggv(x)
+% A megadott fv. értékeit számolja vektor bemenõ paraméterrel.
+% Teszt hívás: y = fuggv([-1,0,1])
+if x >= 1, y = sqrt(x-1);
+	 else y = -sqrt(1-x);
+end
+end 
+
+
+% zh2b - 2 ---------------------------------------------
+
+function Sn = sorossz(n)
+% A megadott n-edik részletösszeget számolja.
+% Teszt hívás: S = sorossz(20)
+Sn = -1;
+for k = 2:n, 
+	Sn = Sn + (-1)^k/k;
+end
+end 
+
+% zh2b - 2 másik meo-------------------------------------------------------
+
+function Sn = sorossz(n)
+% A megadott n-edik részletösszeget számolja.
+% Teszt hívás: S = sorossz(20)
+k = 1:n;
+Sn = sum((-1).^k./k);
+end 
